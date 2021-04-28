@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="arete-style.css">
+    <title>Aretè</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm text-center">
+                <img id="main-image" style="width:60vh;" src="img/psicologia-para-todos.png" alt="Psicologia para todos">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm text-center">
+                <button id="start-button" type="button" class="btn arete-button" onclick="initialize();">Empezamos</button>
+            </div>
+        </div>
+		<div class="row d-flex justify-content-center">
+			<div id="ci" class="col-2">
+				<div class="form-check">
+					<input id="flag-ci" class="form-check-input" type="checkbox">
+					<label class="form-check-label" for="flag-ci">Estoy de acuerdo</label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm text-center">
+				<a href="#" data-toggle="modal" data-target="#staticBackdrop">CONSENTIMIENTO INFORMADO</a>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="staticBackdropLabel">CONSENTIMIENTO INFORMADO</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						En pleno uso de mis facultades certifico que participo de manera voluntaria, consciente y libre de la atención psicológica que ahora emprendo. Soy conocedor que la información aportada al proceso terapéutico está sujeta al secreto profesional, el psicólogo (a) sólo está obligado a revelar ante las instancias oportunas información confidencial en situaciones que pudieran representar riesgo evidente hacia mi integridad física, psicológica, terceras personas o si fuera solicitado por las autoridades legales.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Listo</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Info Modal -->
+		<div class="modal fade" id="info" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="staticBackdropLabel">Psicologia Para Todos</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						En nuestro proyecto, te vas a encontrar  una serie de preguntas que te servirán para identificar algunas herramientas recomendadas de acuerdo a tu estado emocional actual. Responde con honestidad y ten presente que el resultado es confidencial. Puedes elegir una o varias opciones para cada pregunta.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Listo</button>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function(){
+			$("#info").modal('show');
+		});
+	</script>
+</body>
+</html>
